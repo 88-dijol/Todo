@@ -1,0 +1,75 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <title>Document</title>
+    <style>
+        .content {
+            width: 700px;
+            height: 380px;
+            padding: 20px;
+            border: 2px solid rgba(0, 0, 0, 0.404);
+            border-radius: 10px;
+            box-shadow: 0 0 2px black,
+                        0 0 6px black,
+                        0 0 12px black;
+            backdrop-filter: blur(5px);
+        }
+
+        .home {
+            display: flex;
+            justify-content: center;align-items: center;
+            width: 100%;
+            height: 100vh;
+            background-image: url(https://img.freepik.com/premium-photo/list-icon-notebook-with-completed-todo-list-3d-render_471402-428.jpg?w=740);
+            background-size: cover;
+        }
+        .forms{
+            border: 2px solid black;
+            border-radius: 7px;
+            padding: 20px;
+        }
+        .submit{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .btn{
+            background-color: rgba(0, 0, 0, 0.833);
+            color: white;
+        }
+        .btn:hover{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="home">
+        <form action="" method="post" class="content">
+            <h1 style="text-align: center;">Log In</h1>
+            <br>
+            {% csrf_token %}
+            <div class="forms">
+                {{form.as_p}}
+            </div>
+            <br>
+            <div class="submit">
+            <button type="submit" class="btn">Login</button>
+        </div>
+        </form>
+    </div>
+</body>
+
+</html>
